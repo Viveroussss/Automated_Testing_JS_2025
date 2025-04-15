@@ -11,6 +11,9 @@ build/
 # Environment variables
 .env
 
+# Test coverage
+coverage/
+
 # OS-specific files
 .DS_Store
 Thumbs.db
