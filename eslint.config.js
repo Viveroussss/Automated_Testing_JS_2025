@@ -11,7 +11,19 @@ export default defineConfig([
   {
     files: ["**/*.test.js", "**/*.spec.js"],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node, ...globals.mocha }, 
+      globals: { ...globals.browser, ...globals.node, ...globals.mocha },
+    },
+  },
+  {
+    files: ["babel.config.js"],
+    languageOptions: {
+      globals: { ...globals.node },
+    },
+  },
+  {
+    files: ["**/*.js"],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
     },
   },
 ]);
