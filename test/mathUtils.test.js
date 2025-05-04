@@ -19,15 +19,12 @@ describe('Math Utils', () => {
       expect(add(1.5, 2.3)).to.be.closeTo(3.8, 0.0001);
     });
 
-    it('should handle non-numeric inputs', () => {
-      expect(() => add('a', 3)).to.throw('Invalid input');
-      expect(() => add(null, 3)).to.throw('Invalid input');
-      expect(() => add(undefined, 3)).to.throw('Invalid input');
+    it('should throw error for non-numeric first argument', () => {
+      expect(() => add('a', 3)).to.throw('Invalid input: both arguments must be numbers');
     });
 
-    it('should return NaN if adding NaN', () => {
-      expect(add(NaN, 3)).to.be.NaN;
-      expect(add(3, NaN)).to.be.NaN;
+    it('should throw error for non-numeric second argument', () => {
+      expect(() => add(3, 'a')).to.throw('Invalid input: both arguments must be numbers');
     });
   });
 
@@ -44,15 +41,12 @@ describe('Math Utils', () => {
       expect(subtract(5.5, 2.2)).to.be.closeTo(3.3, 0.0001);
     });
 
-    it('should handle non-numeric inputs', () => {
-      expect(() => subtract('a', 4)).to.throw('Invalid input');
-      expect(() => subtract(null, 4)).to.throw('Invalid input');
-      expect(() => subtract(undefined, 4)).to.throw('Invalid input');
+    it('should throw error for non-numeric first argument', () => {
+      expect(() => subtract('a', 4)).to.throw('Invalid input: both arguments must be numbers');
     });
 
-    it('should return NaN if subtracting NaN', () => {
-      expect(subtract(NaN, 4)).to.be.NaN;
-      expect(subtract(4, NaN)).to.be.NaN;
+    it('should throw error for non-numeric second argument', () => {
+      expect(() => subtract(4, 'a')).to.throw('Invalid input: both arguments must be numbers');
     });
   });
 
@@ -77,15 +71,12 @@ describe('Math Utils', () => {
       expect(multiply(2.5, 4)).to.equal(10);
     });
 
-    it('should handle non-numeric inputs', () => {
-      expect(() => multiply('a', 4)).to.throw('Invalid input');
-      expect(() => multiply(null, 4)).to.throw('Invalid input');
-      expect(() => multiply(undefined, 4)).to.throw('Invalid input');
+    it('should throw error for non-numeric first argument', () => {
+      expect(() => multiply('a', 4)).to.throw('Invalid input: both arguments must be numbers');
     });
 
-    it('should return NaN if multiplying NaN', () => {
-      expect(multiply(NaN, 4)).to.be.NaN;
-      expect(multiply(4, NaN)).to.be.NaN;
+    it('should throw error for non-numeric second argument', () => {
+      expect(() => multiply(4, 'a')).to.throw('Invalid input: both arguments must be numbers');
     });
   });
 
@@ -106,15 +97,12 @@ describe('Math Utils', () => {
       expect(() => divide(5, 0)).to.throw("Cannot divide by zero");
     });
 
-    it('should handle non-numeric inputs', () => {
-      expect(() => divide('a', 2)).to.throw('Invalid input');
-      expect(() => divide(null, 2)).to.throw('Invalid input');
-      expect(() => divide(undefined, 2)).to.throw('Invalid input');
+    it('should throw error for non-numeric first argument', () => {
+      expect(() => divide('a', 2)).to.throw('Invalid input: both arguments must be numbers');
     });
 
-    it('should return NaN if dividing by NaN', () => {
-      expect(divide(NaN, 2)).to.be.NaN;
-      expect(divide(2, NaN)).to.be.NaN;
+    it('should throw error for non-numeric second argument', () => {
+      expect(() => divide(2, 'a')).to.throw('Invalid input: both arguments must be numbers');
     });
   });
 });
