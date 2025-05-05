@@ -9,6 +9,8 @@ export default {
       mocha: true,
       describe: 'readonly',
       it: 'readonly',
+      setTimeout: 'readonly',
+      module: 'readonly',
     },
   },
   rules: {

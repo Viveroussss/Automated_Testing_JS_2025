@@ -7,7 +7,9 @@
   "scripts": {
     "test": "c8 mocha --reporter mochawesome --reporter-options reportDir=./mochawesome-report,reportFilename=index",
     "coverage": "c8 mocha",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",

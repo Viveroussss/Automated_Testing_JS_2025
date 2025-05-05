@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { fetchUserData } from '../src/utils/asyncUserUtils.js';
 
 describe('fetchUserData', () => {
-  it('should return user data for valid userId', async () => {
+  it('should return user data for valid userId', async() => {
     const user = await fetchUserData(9);
     expect(user).to.be.an('object');
     expect(user).to.have.property('userId', 9);
@@ -10,7 +10,7 @@ describe('fetchUserData', () => {
     expect(user).to.have.property('email', 'who.am.i@example.com');
   });
 
-  it('should throw an error for invalid userId', async () => {
+  it('should throw an error for invalid userId', async() => {
     try {
       await fetchUserData(99);
     } catch (error) {
@@ -18,7 +18,7 @@ describe('fetchUserData', () => {
     }
   });
 
-  it('should throw an error for non-numeric userId', async () => {
+  it('should throw an error for non-numeric userId', async() => {
     try {
       await fetchUserData('abc');
     } catch (error) {
@@ -26,7 +26,7 @@ describe('fetchUserData', () => {
     }
   });
 
-  it('should throw an error for negative userId', async () => {
+  it('should throw an error for negative userId', async() => {
     try {
       await fetchUserData(-1);
     } catch (error) {
