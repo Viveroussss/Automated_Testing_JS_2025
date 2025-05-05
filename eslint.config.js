@@ -6,6 +6,9 @@ export default {
     globals: {
       browser: true,
       node: true,
+      mocha: true,
+      describe: 'readonly',
+      it: 'readonly',
     },
   },
   rules: {
