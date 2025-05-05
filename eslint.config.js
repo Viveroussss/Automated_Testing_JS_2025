@@ -6,7 +6,14 @@ export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { js },
-    extends: ["js/recommended"],
+    extends: ["js/recommended", "airbnb-base"],
+    rules: {
+      "no-console": "warn",
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "quotes": ["error", "single"],
+      "semi": ["error", "always"],
+      "indent": ["error", 2],
+    },
   },
   {
     files: ["**/*.test.js", "**/*.spec.js"],
