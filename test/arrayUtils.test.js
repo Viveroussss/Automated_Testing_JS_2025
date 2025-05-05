@@ -10,7 +10,6 @@ describe('Array Utils', () => {
 
     it('should return the single element if the array contains only one element', () => {
       expect(findMax([5])).to.equal(5);
-
     });
 
     it('should return -Infinity for an empty array', () => {
