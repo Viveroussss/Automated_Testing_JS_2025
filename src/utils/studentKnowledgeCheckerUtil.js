@@ -6,24 +6,24 @@
  * @returns {boolean} Returns true if all answers are correct, and false if at least one answer is incorrect.
  */
 export function checkStudentKnowledge(studentAnswers, correctAnswers) {
-    const studentKeys = Object.keys(studentAnswers);
-    const correctKeys = Object.keys(correctAnswers);
-  
-    if (studentKeys.length !== correctKeys.length) {
+  const studentKeys = Object.keys(studentAnswers);
+  const correctKeys = Object.keys(correctAnswers);
+
+  if (studentKeys.length !== correctKeys.length) {
+    return false;
+  }
+
+  for (let i = 0; i < studentKeys.length; i++) {
+    if (studentKeys[i] !== correctKeys[i]) {
       return false;
     }
-  
-    for (let i = 0; i < studentKeys.length; i++) {
-      if (studentKeys[i] !== correctKeys[i]) {
-        return false;
-      }
-    }
-  
-    for (let key of studentKeys) {
-      if (studentAnswers[key] !== correctAnswers[key]) {
-        return false;
-      }
-    }
-  
-    return true;
   }
+
+  for (const key of studentKeys) {
+    if (studentAnswers[key] !== correctAnswers[key]) {
+      return false;
+    }
+  }
+
+  return true;
+}

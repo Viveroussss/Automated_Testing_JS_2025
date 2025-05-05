@@ -7,13 +7,13 @@ describe('checkStudentKnowledge', () => {
     const student = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     const correct = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     expect(checkStudentKnowledge(student, correct)).to.be.true;
@@ -23,13 +23,13 @@ describe('checkStudentKnowledge', () => {
     const student = {
       question1: 'A',
       question2: 'C',
-      question3: 'C'
+      question3: 'C',
     };
 
     const correct = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     expect(checkStudentKnowledge(student, correct)).to.be.false;
@@ -40,13 +40,13 @@ describe('checkStudentKnowledge', () => {
       question1: 'A',
       question2: 'B',
       question3: 'C',
-      question4: 'D'
+      question4: 'D',
     };
 
     const correct = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     expect(checkStudentKnowledge(student, correct)).to.be.false;
@@ -55,13 +55,13 @@ describe('checkStudentKnowledge', () => {
   it('should return false if student has fewer answers', () => {
     const student = {
       question1: 'A',
-      question2: 'B'
+      question2: 'B',
     };
 
     const correct = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     expect(checkStudentKnowledge(student, correct)).to.be.false;
@@ -78,13 +78,13 @@ describe('checkStudentKnowledge', () => {
     const student = {
       question1: 1,
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     const correct = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     expect(checkStudentKnowledge(student, correct)).to.be.false;
@@ -94,13 +94,13 @@ describe('checkStudentKnowledge', () => {
     const student = {
       question1: 'A',
       question2: 'B',
-      question3: 3
+      question3: 3,
     };
 
     const correct = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     expect(checkStudentKnowledge(student, correct)).to.be.false;
@@ -111,7 +111,7 @@ describe('checkStudentKnowledge', () => {
     const correct = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     expect(checkStudentKnowledge(student, correct)).to.be.false;
@@ -121,7 +121,7 @@ describe('checkStudentKnowledge', () => {
     const student = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
     const correct = null;
 
@@ -132,13 +132,13 @@ describe('checkStudentKnowledge', () => {
     const student = {
       question3: 'C',
       question1: 'A',
-      question2: 'B'
+      question2: 'B',
     };
 
     const correct = {
       question1: 'A',
       question2: 'B',
-      question3: 'C'
+      question3: 'C',
     };
 
     expect(checkStudentKnowledge(student, correct)).to.be.true;
