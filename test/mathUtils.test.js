@@ -94,7 +94,7 @@ describe('Math Utils', () => {
     });
 
     it('should throw when dividing by zero', () => {
-      expect(() => divide(5, 0)).to.throw("Cannot divide by zero");
+      expect(() => divide(5, 0)).to.throw('Cannot divide by zero');
     });
 
     it('should throw error for non-numeric first argument', () => {

@@ -3,7 +3,7 @@ import {
   filterUsersByAge,
   sortUsersByName,
   findUserById,
-  isEmailTaken
+  isEmailTaken,
 } from '../src/utils/userListUtils.js';
 
 describe('User Utilities', () => {
@@ -11,14 +11,14 @@ describe('User Utilities', () => {
     { id: 1, name: 'Alice', age: 25, email: 'alice@example.com' },
     { id: 2, name: 'Bob', age: 30, email: 'bob@example.com' },
     { id: 3, name: 'Charlie', age: 35, email: 'charlie@example.com' },
-    { id: 4, name: 'Diana', age: 40, email: 'diana@example.com' }
+    { id: 4, name: 'Diana', age: 40, email: 'diana@example.com' },
   ];
 
   const usersWithMissingProps = [
-    { id: 5, name: 'Eve' }, 
-    { id: 6, age: 48, email: 'frank@example.com' }, 
-    { name: 'Grace', age: 52, email: 'grace@example.com' }, 
-    { id: 7, name: 'Heidi', age: 29 } 
+    { id: 5, name: 'Eve' },
+    { id: 6, age: 48, email: 'frank@example.com' },
+    { name: 'Grace', age: 52, email: 'grace@example.com' },
+    { id: 7, name: 'Heidi', age: 29 },
   ];
 
   describe('filterUsersByAge', () => {
