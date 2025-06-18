@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "c8 mocha --reporter mochawesome --reporter-options reportDir=./mochawesome-report,reportFilename=index",
-    "coverage": "c8 mocha",
+    "test": "mocha",
     "prepare": "husky install",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -34,7 +33,9 @@
     "lint-staged": "^15.5.1",
     "mocha": "^11.1.0",
     "mochawesome": "^7.1.3",
-    "mochawesome-report-generator": "^6.2.0"
+    "mochawesome-report-generator": "^6.2.0",
+    "nock": "^14.0.5",
+    "supertest": "^7.1.1"
   },
   "lint-staged": {
     "*.js": "eslint --fix"
